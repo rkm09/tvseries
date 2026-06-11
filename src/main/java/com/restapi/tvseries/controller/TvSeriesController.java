@@ -12,6 +12,6 @@ public class TvSeriesController {
     @GetMapping("/tvseries")
     public TvSeries fetchTvSeries(@RequestParam(defaultValue = "1") int page) {
 
-        return new TvSeries();
+        return new TvSeries(0,0,0,0,new String[]{});
     }
 }
