@@ -17,7 +17,6 @@ public class TvSeriesApplication {
 
 	@Bean
 	public RestClient restClient(RestClient.Builder builder) {
-		log.info("calling rest client");
 		return builder
 				.baseUrl("https://jsonmock.hackerrank.com/")
 				.requestInterceptor((request, body, execution) -> {
