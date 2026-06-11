@@ -1,0 +1,118 @@
+{
+  "page": 1,
+  "per_page": 10,
+  "total": 200,
+  "total_pages": 20,
+  "data": [
+    {
+      "name": "Game of Thrones",
+      "runtime_of_series": "(2011-2019)",
+      "certificate": "A",
+      "runtime_of_episodes": "57 min",
+      "genre": "Action, Adventure, Drama",
+      "imdb_rating": 9.3,
+      "overview": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.",
+      "no_of_votes": 1773458,
+      "id": 1
+    },
+    {
+      "name": "Breaking Bad",
+      "runtime_of_series": "(2008-2013)",
+      "certificate": "18",
+      "runtime_of_episodes": "49 min",
+      "genre": "Crime, Drama, Thriller",
+      "imdb_rating": 9.5,
+      "overview": "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
+      "no_of_votes": 1468887,
+      "id": 2
+    },
+    {
+      "name": "The Walking Dead",
+      "runtime_of_series": "(2010- )",
+      "certificate": "18+",
+      "runtime_of_episodes": "44 min",
+      "genre": "Drama, Horror, Thriller",
+      "imdb_rating": 8.2,
+      "overview": "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive.",
+      "no_of_votes": 854698,
+      "id": 3
+    },
+    {
+      "name": "Friends",
+      "runtime_of_series": "(1994-2004)",
+      "certificate": "13+",
+      "runtime_of_episodes": "22 min",
+      "genre": "Comedy, Romance",
+      "imdb_rating": 8.9,
+      "overview": "Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan.",
+      "no_of_votes": 829816,
+      "id": 4
+    },
+    {
+      "name": "Stranger Things",
+      "runtime_of_series": "(2016- )",
+      "certificate": "15",
+      "runtime_of_episodes": "51 min",
+      "genre": "Drama, Fantasy, Horror",
+      "imdb_rating": 8.7,
+      "overview": "When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back.",
+      "no_of_votes": 824966,
+      "id": 5
+    },
+    {
+      "name": "Sherlock",
+      "runtime_of_series": "(2010-2017)",
+      "certificate": "UA",
+      "runtime_of_episodes": "88 min",
+      "genre": "Crime, Drama, Mystery",
+      "imdb_rating": 9.1,
+      "overview": "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
+      "no_of_votes": 808717,
+      "id": 6
+    },
+    {
+      "name": "The Big Bang Theory",
+      "runtime_of_series": "(2007-2019)",
+      "certificate": "U",
+      "runtime_of_episodes": "22 min",
+      "genre": "Comedy, Romance",
+      "imdb_rating": 8.1,
+      "overview": "A woman who moves into an apartment across the hall from two brilliant but socially awkward physicists shows them how little they know about life outside of the laboratory.",
+      "no_of_votes": 724187,
+      "id": 7
+    },
+    {
+      "name": "Dexter",
+      "runtime_of_series": "(2006-2021)",
+      "certificate": "A",
+      "runtime_of_episodes": "53 min",
+      "genre": "Crime, Drama, Mystery",
+      "imdb_rating": 8.6,
+      "overview": "By day, mild-mannered Dexter is a blood-spatter analyst for the Miami police. But at night, he is a serial killer who only targets other murderers.",
+      "no_of_votes": 647136,
+      "id": 8
+    },
+    {
+      "name": "How I Met Your Mother",
+      "runtime_of_series": "(2005-2014)",
+      "certificate": "15+",
+      "runtime_of_episodes": "22 min",
+      "genre": "Comedy, Romance",
+      "imdb_rating": 8.3,
+      "overview": "A father recounts to his children - through a series of flashbacks - the journey he and his four best friends took leading up to him meeting their mother.",
+      "no_of_votes": 603824,
+      "id": 9
+    },
+    {
+      "name": "True Detective",
+      "runtime_of_series": "(2014- )",
+      "certificate": "A",
+      "runtime_of_episodes": "55 min",
+      "genre": "Crime, Drama, Mystery",
+      "imdb_rating": 9,
+      "overview": "Seasonal anthology series in which police investigations unearth the personal and professional secrets of those involved, both within and outside the law.",
+      "no_of_votes": 500194,
+      "id": 10
+    }
+  ]
+}
