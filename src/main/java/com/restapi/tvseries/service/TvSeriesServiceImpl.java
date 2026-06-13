@@ -12,7 +12,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 
-import static java.util.stream.Collectors.toList;
 
 @Service
 public class TvSeriesServiceImpl implements TvSeriesService {
