@@ -12,23 +12,8 @@ import org.springframework.web.client.RestClient;
 @SpringBootApplication
 public class TvSeriesApplication {
 
-	private static final Logger log = LoggerFactory.getLogger(TvSeriesApplication.class);
 	public static void main(String[] args) {
 		SpringApplication.run(TvSeriesApplication.class, args);
-	}
-
-	@Bean
-	public RestClient restClient(RestClient.Builder builder) {
-		return builder
-				.baseUrl("https://jsonmock.hackerrank.com/")
-				.defaultStatusHandler(
-                        HttpStatusCode::isError,
-						((request, response) -> {
-							log.error("API error detected: {}", response.getStatusCode());
-							throw new ExternalApiException("The downstream HackerRank API is currently unavailable.");
-						})
-				)
-				.build();
 	}
 
 }
