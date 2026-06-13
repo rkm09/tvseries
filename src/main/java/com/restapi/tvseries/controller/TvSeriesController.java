@@ -1,14 +1,17 @@
 package com.restapi.tvseries.controller;
 
+import com.restapi.tvseries.repository.model.ApiResponse;
 import com.restapi.tvseries.repository.model.Series;
 import com.restapi.tvseries.repository.model.TvSeries;
 import com.restapi.tvseries.service.TvSeriesService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("/api/tvseries")
@@ -26,14 +29,26 @@ public class TvSeriesController {
     }
 
     @GetMapping("/all")
-    public List<Series> allTvInfo() {
-        return tvSeriesService.fetchAll();
+    public ResponseEntity<ApiResponse> allTvInfo() {
+        ApiResponse response = new ApiResponse(
+                LocalDateTime.now(),
+                HttpStatus.OK.value(),
+                tvSeriesService.fetchAll()
+        );
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
 
     @GetMapping("/time_frame")
-    public List<Series> tvInfoByPeriod(@RequestParam int startYear,
-                                      @RequestParam(defaultValue = "-1") int endYear) {
-        return tvSeriesService.fetchByPeriod(startYear, endYear);
+    public ResponseEntity<ApiResponse> tvInfoByPeriod(@RequestParam int startYear,
+                                                      @RequestParam(defaultValue = "-1") int endYear) {
+        ApiResponse response = new ApiResponse(
+                LocalDateTime.now(),
+                HttpStatus.OK.value(),
+                tvSeriesService.fetchByPeriod(startYear, endYear)
+        );
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
