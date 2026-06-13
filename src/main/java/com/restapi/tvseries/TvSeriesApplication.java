@@ -1,10 +1,12 @@
 package com.restapi.tvseries;
 
+import com.restapi.tvseries.exception.ExternalApiException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.web.client.RestClient;
 
 @SpringBootApplication
@@ -19,15 +21,13 @@ public class TvSeriesApplication {
 	public RestClient restClient(RestClient.Builder builder) {
 		return builder
 				.baseUrl("https://jsonmock.hackerrank.com/")
-				.requestInterceptor((request, body, execution) -> {
-					log.info("Sending external request to: {}", request.getURI());
-					long startTime = System.currentTimeMillis();
-					var response = execution.execute(request, body);
-					long duration = System.currentTimeMillis() - startTime;
-					log.info("Received response with status {} in {} ms", response.getStatusCode(),
-							duration);
-					return response;
-				})
+				.defaultStatusHandler(
+                        HttpStatusCode::isError,
+						((request, response) -> {
+							log.error("API error detected: {}", response.getStatusCode());
+							throw new ExternalApiException("The downstream HackerRank API is currently unavailable.");
+						})
+				)
 				.build();
 	}
 
@@ -50,6 +50,22 @@ public class TvSeriesApplication {
             assert tvSeries != null;
             log.info(tvSeries.toString());
 		};
+	}
+
+	@Bean
+	public RestClient restClient(RestClient.Builder builder) {
+		return builder
+				.baseUrl("https://jsonmock.hackerrank.com/")
+				.requestInterceptor((request, body, execution) -> {
+					log.info("Sending external request to: {}", request.getURI());
+					long startTime = System.currentTimeMillis();
+					var response = execution.execute(request, body);
+					long duration = System.currentTimeMillis() - startTime;
+					log.info("Received response with status {} in {} ms", response.getStatusCode(),
+							duration);
+					return response;
+				})
+				.build();
 	}
  */
 
