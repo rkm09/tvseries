@@ -1,7 +1,6 @@
 package com.restapi.tvseries.controller;
 
 import com.restapi.tvseries.repository.model.ApiResponse;
-import com.restapi.tvseries.repository.model.Series;
 import com.restapi.tvseries.repository.model.TvSeries;
 import com.restapi.tvseries.service.TvSeriesService;
 import org.springframework.http.HttpStatus;
